@@ -5,17 +5,21 @@
 // лучше обойтись исключительно массивами.
 
 int maxNumSymbols = 3;
+
 string[] inArray = { "hello", "2", "world", ":-)" };
 //string[] inArray = {"1234", "1567", "-2", "computer science"};
 //string[] inArray = {"Russia", "Denmark", "Kazan"};
+
 int lenOutArray = 0;
-foreach (var item in inArray)
+
+for (int i = 0; i < inArray.Length; i++)
 {
-    if (item.Length <= maxNumSymbols)
+    if (inArray[i].Length <= maxNumSymbols)
     {
         lenOutArray++;
     }
 }
+
 string[] outArray = new string[lenOutArray];
 
 PrintArray(inArray);
